@@ -1138,7 +1138,6 @@ namespace Sulakore.Habbo
             if (init == null) return false;
 
             ASCode code = init.Body.ParseCode();
-            code.Deobfuscate();
 
             init.Body.Code = code.ToArray();
             code = init.Body.ParseCode();

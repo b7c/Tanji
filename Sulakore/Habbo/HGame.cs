@@ -709,6 +709,8 @@ namespace Sulakore.Habbo
             if (!InjectEndPointSaver(out _, out _)) return false;
 
             ASCode code = initMethod.Body.ParseCode();
+
+            int injectIndex = -1;
             for (int i = 0; i < code.Count; i++)
             {
                 ASInstruction instruction = code[i];
@@ -717,11 +719,22 @@ namespace Sulakore.Habbo
                 var callPropVoid = (CallPropVoidIns)instruction;
                 if (callPropVoid.PropertyName.Name == "connect" && callPropVoid.ArgCount == 2)
                 {
-                    code[i - 2] = new PushStringIns(abc, host);
-                    code[i - 1] = new PushIntIns(abc, port);
+                    injectIndex = i;
                     break;
                 }
             }
+
+            if (injectIndex < 2) return false;
+            if (code[injectIndex - 2] is PushStringIns pushStr && pushStr.Value == host &&
+                code[injectIndex - 1] is PushIntIns pushInt && pushInt.Value == port) return true;
+
+            code.InsertRange(injectIndex, new ASInstruction[]
+            {
+                new PopIns(),
+                new PopIns(),
+                new PushStringIns(abc, host),
+                new PushIntIns(abc, port)
+            });
             initMethod.Body.Code = code.ToArray();
 
             HasPingInstructions = GetConnectionInitiationCount() > 1;

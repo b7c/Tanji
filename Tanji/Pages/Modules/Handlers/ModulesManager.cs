@@ -29,6 +29,7 @@ namespace Tanji.Pages.Modules.Handlers
         public override HGameData GameData => UI.GameData;
         public override IHConnection Connection => UI.Connection;
 
+        public int RemoteModulePort { get; }
         public MainFrm UI { get; }
         public HNode RemoteModule { get; private set; }
         public ModuleActionDelegate OnModuleAction { get; set; }
@@ -39,6 +40,7 @@ namespace Tanji.Pages.Modules.Handlers
         {
             _moduleItems = new Dictionary<Type, ModuleItem>();
 
+            RemoteModulePort = (int)(Program.Settings["RemoteModulePort"] ?? 8055);
             UI = ui;
 
             DataAwaiters = new Dictionary<string, TaskCompletionSource<DataInterceptedEventArgs>>();
@@ -59,7 +61,7 @@ namespace Tanji.Pages.Modules.Handlers
 
         private async Task GrabRemoteModuleAsync()
         {
-            RemoteModule = await HNode.AcceptAsync(8055).ConfigureAwait(false);
+            RemoteModule = await HNode.AcceptAsync(RemoteModulePort).ConfigureAwait(false);
             Task receiveRemModuDataTask = ReceiveRemoteModuleDataAsync();
         }
         private async Task ReceiveRemoteModuleDataAsync()

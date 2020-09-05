@@ -1597,7 +1597,7 @@
             // 
             this.InjectionMenu.InputBox = null;
             this.InjectionMenu.Name = "InjectionMenu";
-            this.InjectionMenu.Size = new System.Drawing.Size(174, 170);
+            this.InjectionMenu.Size = new System.Drawing.Size(173, 170);
             // 
             // SavePacketDlg
             // 
@@ -1642,9 +1642,9 @@
             this.TanjiInfoTxt.IsLink = true;
             this.TanjiInfoTxt.LinkColor = System.Drawing.SystemColors.HotTrack;
             this.TanjiInfoTxt.Name = "TanjiInfoTxt";
-            this.TanjiInfoTxt.Size = new System.Drawing.Size(186, 19);
+            this.TanjiInfoTxt.Size = new System.Drawing.Size(155, 19);
             this.TanjiInfoTxt.Spring = true;
-            this.TanjiInfoTxt.Text = "Github - ArachisH/Tanji";
+            this.TanjiInfoTxt.Text = "Github - b7c/Tanji";
             this.TanjiInfoTxt.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.TanjiInfoTxt.Click += new System.EventHandler(this.TanjiInfoTxt_Click);
             // 

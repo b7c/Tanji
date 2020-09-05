@@ -248,8 +248,11 @@ namespace Tanji.Windows
 
             PacketLoggerUI.RevisionTxt.Text = ("Revision: " + Game.Revision);
 
-            PacketLoggerUI.Show();
-            PacketLoggerUI.WindowState = FormWindowState.Normal;
+            if ((bool)Program.Settings["EnableLogger"])
+            {
+                PacketLoggerUI.Show();
+                PacketLoggerUI.WindowState = FormWindowState.Normal;
+            }
 
             BringToFront();
         }
@@ -261,7 +264,10 @@ namespace Tanji.Windows
             }
             else if (e.Packet.Header == In.LatencyResponse)
             {
-                PacketLoggerUI.Latency = (int)(e.Timestamp - _latencyTestStart).TotalMilliseconds;
+                if (PacketLoggerUI.Visible)
+                {
+                    PacketLoggerUI.Latency = (int)(e.Timestamp - _latencyTestStart).TotalMilliseconds;
+                }
             }
             foreach (IReceiver receiver in _receivers)
             {

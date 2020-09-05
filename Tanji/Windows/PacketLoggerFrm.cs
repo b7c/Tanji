@@ -508,7 +508,7 @@ namespace Tanji.Windows
         }
 
         #region IReceiver Implementation
-        private bool _isReceiving = true;
+        private bool _isReceiving = false;
         public bool IsReceiving => (_isReceiving && (IsViewingOutgoing || IsViewingIncoming));
         #endregion
         #region IHaltable Implementation

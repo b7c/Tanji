@@ -27,7 +27,7 @@ namespace Tanji.Pages.About
 
 #if !DEBUG
             var git = new GitHubClient(new ProductHeaderValue("Tanji"));
-            git.Repository.Release.GetAll("ArachisH", "Tanji").ContinueWith(GrabbedReleases, TaskScheduler.FromCurrentSynchronizationContext());
+            git.Repository.Release.GetAll("b7c", "Tanji").ContinueWith(GrabbedReleases, TaskScheduler.FromCurrentSynchronizationContext());
             //git.Repository.Content.GetAllContents("ArachisH", "Tanji", "Tanji/Hashes.ini").ContinueWith(GrabbedHashes, TaskScheduler.FromCurrentSynchronizationContext());
 #endif
 

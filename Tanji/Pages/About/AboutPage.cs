@@ -38,7 +38,7 @@ namespace Tanji.Pages.About
             UI.DonateBtn.Click += DonateBtn_Click;
             UI.HarbleDiscordBtn.Click += HarbleDiscordBtn_Click;
 
-            UI.SNGButton.Click += SNGButton_Click;
+            UI.AllSeeingEyeBtn.Click += AllSeeingEyeButton_Click;
             UI.DarkboxBtn.Click += DarkboxBtn_Click;
             UI.SelloutBtn.Click += SelloutBtn_Click;
             UI.Sellout2Btn.Click += Sellout2Btn_Click;
@@ -114,9 +114,9 @@ namespace Tanji.Pages.About
             Process.Start("https://github.com/Niewiarowski/HabboInterceptor");
         }
 
-        private void SNGButton_Click(object sender, EventArgs e)
+        private void AllSeeingEyeButton_Click(object sender, EventArgs e)
         {
-            Process.Start("https://sngforum.info/");
+            Process.Start("https://allseeingeye.to/");
         }
         private void DarkboxBtn_Click(object sender, EventArgs e)
         {

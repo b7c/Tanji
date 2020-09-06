@@ -172,7 +172,7 @@
             this.HarbleDiscordBtn = new Sulakore.Components.SKoreButton();
             this.DonateBtn = new Sulakore.Components.SKoreButton();
             this.SpeaqerBtn = new Sulakore.Components.SKoreButton();
-            this.SNGButton = new Sulakore.Components.SKoreButton();
+            this.AllSeeingEyeBtn = new Sulakore.Components.SKoreButton();
             this.DarkboxBtn = new Sulakore.Components.SKoreButton();
             this.DarkStarBtn = new Sulakore.Components.SKoreButton();
             this.ArachisBtn = new Sulakore.Components.SKoreButton();
@@ -1495,7 +1495,7 @@
             this.AboutTab.Controls.Add(this.HarbleDiscordBtn);
             this.AboutTab.Controls.Add(this.DonateBtn);
             this.AboutTab.Controls.Add(this.SpeaqerBtn);
-            this.AboutTab.Controls.Add(this.SNGButton);
+            this.AboutTab.Controls.Add(this.AllSeeingEyeBtn);
             this.AboutTab.Controls.Add(this.DarkboxBtn);
             this.AboutTab.Controls.Add(this.DarkStarBtn);
             this.AboutTab.Controls.Add(this.ArachisBtn);
@@ -1557,12 +1557,12 @@
             // 
             // SNGButton
             // 
-            this.SNGButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.SNGButton.Location = new System.Drawing.Point(233, 133);
-            this.SNGButton.Name = "SNGButton";
-            this.SNGButton.Size = new System.Drawing.Size(117, 20);
-            this.SNGButton.TabIndex = 6;
-            this.SNGButton.Text = "SnGForum.info";
+            this.AllSeeingEyeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.AllSeeingEyeBtn.Location = new System.Drawing.Point(233, 133);
+            this.AllSeeingEyeBtn.Name = "AllSeeingEyeBtn";
+            this.AllSeeingEyeBtn.Size = new System.Drawing.Size(117, 20);
+            this.AllSeeingEyeBtn.TabIndex = 6;
+            this.AllSeeingEyeBtn.Text = "AllSeeingEye.to";
             // 
             // DarkboxBtn
             // 
@@ -1827,7 +1827,7 @@
         internal Sulakore.Components.SKoreButton DarkStarBtn;
         internal Sulakore.Components.SKoreButton ArachisBtn;
         internal Sulakore.Components.SKoreButton SpeaqerBtn;
-        internal Sulakore.Components.SKoreButton SNGButton;
+        internal Sulakore.Components.SKoreButton AllSeeingEyeBtn;
         internal Sulakore.Components.SKoreButton DarkboxBtn;
         internal Sulakore.Components.SKoreButton DonateBtn;
         internal System.Windows.Forms.ToolStripStatusLabel TanjiVersionTxt;
